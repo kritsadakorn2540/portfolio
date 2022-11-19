@@ -21,7 +21,7 @@
      <!-- Home Section -->
      <header id="home" class="h-screen w-full">
           <!-- Navbar -->
-          <div id="navbar" class="w-full top-0 z-10">
+          <div id="navbar" class="w-full top-0 z-10 animate__animated animate__faster">
                <div
                     class="flex justify-between py-4 max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-5xl xl:max-w-7xl mx-auto">
                     <div class="uppercase text-white border-b-4 border-r-2 border-white px-2">kritsadakorn</div>
@@ -59,7 +59,7 @@
 
                               <p class="relative group px-2">
                                    <span class="opacity-70 group-hover:opacity-100 transition duration-300"><a
-                                             href="#career">CAREER</a></span>
+                                             href="#archive">ARCHIVE</a></span>
                                    <span
                                         class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
                               </p>
@@ -107,8 +107,8 @@
      <div id="about" class="h-screen">
           <div class="h-full flex flex-col items-center justify-center">
                <div class="max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-5xl xl:max-w-7xl mx-auto">
-                    <p class="text-5xl font-medium text-white text-center">About me</p>
-                    <p class="text-xl text-white max-w-[40%] mx-auto">I am a person who likes to create a website with
+                    <p class="text-5xl font-medium text-white text-center" data-aos="fade-right" data-aos-duration="2000">About me</p>
+                    <p class="text-xl text-white max-w-[40%] mx-auto" data-aos="fade-left" data-aos-duration="2000">I am a person who likes to create a website with
                          more than one year of experiance, I want to
                          improve myself more. because I want to be the best developer for success in my career.</p>
                </div>
@@ -142,10 +142,13 @@
                          </div>
                          <div
                               class="h-28 w-28 bg-[#f7f7f7] rounded-full overflow-hidden flex items-center justify-center">
-                              <img src="./img/livewire.png" class="">
+                              <img src="./img/livewire.png">
                          </div>
                          <div class="h-28 w-28 bg-white rounded-full overflow-hidden">
                               <img src="./img/mysql.png">
+                         </div>
+                         <div class="h-28 w-28 bg-black rounded-full overflow-hidden">
+                              <img src="./img/github.png">
                          </div>
                     </div>
                </div>
@@ -153,15 +156,15 @@
      </div>
      <!-- End Skills Section -->
 
-     <!-- Career Section -->
-     <div id="career" class="h-screen">
+     <!-- Archive Section -->
+     <div id="archive" class="h-screen">
           <div class="h-full flex flex-col items-center justify-center">
                <div class="max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-5xl xl:max-w-7xl mx-auto">
-                    <p class="text-5xl font-medium text-white text-center">Career</p>
+                    <p class="text-5xl font-medium text-white text-center">Archive</p>
                </div>
           </div>
      </div>
-     <!-- End Career Section -->
+     <!-- End Archive Section -->
 
      <!-- Contact Section -->
      <div id="contact" class="h-screen">
@@ -202,11 +205,11 @@
                if (window.pageYOffset >= 350) {
                     navbar.classList.add("fixed");
                     navbar.classList.add("bg-gray-900");
-                    navbar.classList.add("animate__animated animate__fadeInDown animate__slow");
+                    navbar.classList.add("animate__fadeInDown");
                } else {
                     navbar.classList.remove("fixed");
                     navbar.classList.remove("bg-gray-900");
-                    navbar.classList.remove("animate__animated animate__fadeInDown animate__slow");
+                    navbar.classList.remove("animate__fadeInDown");
                }
           }
      </script>
@@ -224,7 +227,10 @@
      </script>
 
      <script>
-          AOS.init();
+          AOS.init({
+               once: true
+          });
+          
      </script>
 </body>
 
