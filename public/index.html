@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+          integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+     <title>Kritsadakorn Khaoluang - Portfolio</title>
+</head>
+
+<body class="min-h-screen max-w-full bg-no-repeat bg-cover bg-center bg-scroll"
+     style="background-image: url('./img/header-background.jpg');">
+
+     <!-- Home Section -->
+     <header id="home" class="h-screen w-full">
+          <!-- Navbar -->
+          <div id="navbar" class="w-full top-0 z-10">
+               <div
+                    class="flex justify-between py-4 max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-5xl xl:max-w-7xl mx-auto">
+                    <div class="uppercase text-white border-b-4 border-r-2 border-white px-2">kritsadakorn</div>
+
+                    <div class="md:hidden">
+                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="currentColor" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                   d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                         </svg>
+                    </div>
+
+                    <div class="hidden md:block">
+                         <div class="flex gap-8 text-white">
+                              <p class="relative group px-2">
+                                   <span class="opacity-70 group-hover:opacity-100 transition duration-300"><a
+                                             href="#home">HOME</a></span>
+                                   <span
+                                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                              </p>
+
+                              <p class="relative group px-2">
+                                   <span class="opacity-70 group-hover:opacity-100 transition duration-300"><a
+                                             href="#about">ABOUT</a></span>
+                                   <span
+                                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                              </p>
+
+                              <p class="relative group px-2">
+                                   <span class="opacity-70 group-hover:opacity-100 transition duration-300"><a
+                                             href="#skills">SKILLS</a></span>
+                                   <span
+                                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                              </p>
+
+                              <p class="relative group px-2">
+                                   <span class="opacity-70 group-hover:opacity-100 transition duration-300"><a
+                                             href="#career">CAREER</a></span>
+                                   <span
+                                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                              </p>
+
+                              <p class="relative group px-2">
+                                   <span class="opacity-70 group-hover:opacity-100 transition duration-300"><a
+                                             href="#contact">CONTACT</a></span>
+                                   <span
+                                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                              </p>
+
+                              <div class="flex gap-2">
+                                   <a href=""><i class="fab fa-github fa-xl"></i></a>
+                                   <a href=""><i class="fab fa-instagram fa-xl"></i></a>
+                                   <a href=""><i class="fab fa-facebook fa-xl"></i></a>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <!-- End Navbar -->
+
+          <div
+               class="h-[95%] w-full flex flex-col items-center justify-center max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-5xl xl:max-w-7xl mx-auto">
+               <div class="w-full flex items-center justify-between">
+                    <div class="w-1/2 flex justify-center text-white">
+                         <div class="w-[60%]">
+                              <p class="text-5xl font-medium">Hello!</p> <br>
+                              <p id="intro" class="text-2xl"></p>
+                         </div>
+                    </div>
+                    <div class="w-1/2">
+                         <div class="w-[50%] mx-auto">
+                              <img data-aos="fade-left" data-aos-duration="2000" src="./img/Profile3.jpg"
+                                   class="mask mask-circle object-center object-cover transform transition hover:scale-110 duration-300">
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </header>
+     <!-- End Home Section -->
+
+
+     <!-- About Section -->
+     <div id="about" class="h-screen">
+          <div class="h-full flex flex-col items-center justify-center">
+               <div class="max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-5xl xl:max-w-7xl mx-auto">
+                    <p class="text-5xl font-medium text-white text-center">About me</p>
+                    <p class="text-xl text-white max-w-[40%] mx-auto">I am a person who likes to create a website with
+                         more than one year of experiance, I want to
+                         improve myself more. because I want to be the best developer for success in my career.</p>
+               </div>
+          </div>
+     </div>
+     <!-- End About Section -->
+
+     <!-- Skills Section -->
+     <div id="skills" class="h-screen">
+          <div class="h-full flex flex-col items-center justify-center">
+               <div class="max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-5xl xl:max-w-7xl mx-auto">
+                    <p class="text-5xl font-medium text-white text-center">Skills</p>
+                    <div class="flex gap-2">
+                         <div class="h-28 w-28 bg-[#e44d26] rounded-full overflow-hidden">
+                              <img src="./img/html.webp">
+                         </div>
+                         <div class="h-28 w-28 bg-[#379ad6] rounded-full overflow-hidden">
+                              <img src="./img/css.webp">
+                         </div>
+                         <div class="h-28 w-28 bg-white rounded-full overflow-hidden flex items-center justify-center">
+                              <img src="./img/tailwind.png" class="w-[90%]">
+                         </div>
+                         <div class="h-28 w-28 bg-[#ffdf00] rounded-full overflow-hidden relative">
+                              <img src="./img/javascript.png" class="absolute right-2.5 bottom-4">
+                         </div>
+                         <div class="h-28 w-28 bg-transparent rounded-full overflow-hidden">
+                              <img src="./img/php.png">
+                         </div>
+                         <div class="h-28 w-28 bg-white rounded-full overflow-hidden flex items-center justify-center">
+                              <img src="./img/laravel.png" class="w-[60%]">
+                         </div>
+                         <div
+                              class="h-28 w-28 bg-[#f7f7f7] rounded-full overflow-hidden flex items-center justify-center">
+                              <img src="./img/livewire.png" class="">
+                         </div>
+                         <div class="h-28 w-28 bg-white rounded-full overflow-hidden">
+                              <img src="./img/mysql.png">
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <!-- End Skills Section -->
+
+     <!-- Career Section -->
+     <div id="career" class="h-screen">
+          <div class="h-full flex flex-col items-center justify-center">
+               <div class="max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-5xl xl:max-w-7xl mx-auto">
+                    <p class="text-5xl font-medium text-white text-center">Career</p>
+               </div>
+          </div>
+     </div>
+     <!-- End Career Section -->
+
+     <!-- Contact Section -->
+     <div id="contact" class="h-screen">
+          <div class="h-full flex flex-col items-center justify-center">
+               <div class="max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-5xl xl:max-w-7xl mx-auto">
+                    <p class="text-5xl font-medium text-white text-center">Contact</p>
+               </div>
+          </div>
+     </div>
+     <!-- End Contact Section -->
+
+
+     <script>
+          var i = 0;
+          var txt = `My name is Kritsadakorn Khaoluang I'm a Web Developer.`;
+          var speed = 50;
+
+          function typeWriter() {
+               if (i < txt.length) {
+                    document.getElementById("intro").innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+               }
+
+          }
+          $(function () {
+               typeWriter();
+          });
+     </script>
+
+     <script>
+          window.onscroll = function () { myFunction() };
+
+          var navbar = document.getElementById("navbar");
+          var sticky = navbar.offsetTop;
+
+          function myFunction() {
+               if (window.pageYOffset >= 350) {
+                    navbar.classList.add("fixed");
+                    navbar.classList.add("bg-gray-900");
+                    navbar.classList.add("animate__animated animate__fadeInDown animate__slow");
+               } else {
+                    navbar.classList.remove("fixed");
+                    navbar.classList.remove("bg-gray-900");
+                    navbar.classList.remove("animate__animated animate__fadeInDown animate__slow");
+               }
+          }
+     </script>
+
+     <script>
+          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+               anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                         behavior: 'smooth'
+                    });
+               });
+          });
+     </script>
+
+     <script>
+          AOS.init();
+     </script>
+</body>
+
+</html>
