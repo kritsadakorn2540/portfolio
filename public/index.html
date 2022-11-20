@@ -29,6 +29,135 @@
                     0 0 160px #03bcf4;
                }
           }
+
+          #logo:before {
+               animation: typing 5s linear infinite;
+          }
+
+          @keyframes typing {
+               0%,10%,100% {
+                    width: 0;
+               }
+               70%,90% {
+                    width: 100%;
+                    text-shadow: 0 0 2px #03bcf4,
+                    0 0 4px #03bcf4,
+                    0 0 6px #03bcf4,
+                    0 0 8px #03bcf4;
+               }
+          }
+
+          #button:hover {
+               box-shadow: 0 0 5px #03e9f4,
+                          0 0 10px #03e9f4,
+                          0 0 15px #03e9f4,
+                          0 0 20px #03e9f4;
+          }
+
+          a#button span:nth-child(1) {
+               top: 0;
+               left: -100%;
+               width: 100%;
+               height: 2px;
+               background: linear-gradient(90deg,transparent,#03e9f4);
+               animation: animate1 1s linear infinite;
+          }
+          @keyframes animate1 {
+               0% {
+                    left: -100%;
+               }
+               50%, 100% {
+                    left: 100%;
+               }
+          }
+          a#button span:nth-child(2) {
+               top: -100%;
+               right: 0;
+               width: 2px;
+               height: 100%;
+               background: linear-gradient(180deg,transparent,#03e9f4);
+               animation: animate2 1s linear infinite;
+               animation-delay: 0.25s;
+          }
+          @keyframes animate2 {
+               0% {
+                    top: -100%;
+               }
+               50%, 100% {
+                    top: 100%;
+               }
+          }
+          a#button span:nth-child(3) {
+               bottom: 0;
+               right: -100%;
+               width: 100%;
+               height: 2px;
+               background: linear-gradient(90deg,transparent,#03e9f4);
+               animation: animate3 1s linear infinite;
+               animation-delay: 0.5s;
+          }
+          @keyframes animate3 {
+               0% {
+                    right: -100%;
+               }
+               50%, 100% {
+                    right: 100%;
+               }
+          }
+          a#button span:nth-child(4) {
+               bottom: -100%;
+               left: 0;
+               width: 2px;
+               height: 100%;
+               background: linear-gradient(180deg,transparent,#03e9f4);
+               animation: animate4 1s linear infinite;
+               animation-delay: 0.75s;
+          }
+          @keyframes animate4 {
+               0% {
+                    bottom: -100%;
+               }
+               50%, 100% {
+                    bottom: 100%;
+               }
+          }
+
+          a#portLogo {
+               transform-style: preserve-3d;
+               transition: ease-in-out 2s;
+               border-radius: 60px;
+          }
+          a#portLogo:hover {
+               transform: rotateY(360deg);
+          }
+          a#portLogo span {
+               transform-style: preserve-3d;
+               transform: perspective(100px) translateZ(10px);
+          }
+          a#portLogo:before {
+               content: '';
+               position: absolute;
+               top: 4px;
+               left: 6px;
+               right: 6px;
+               bottom: 4px;
+               border: 2px solid #fff;
+               transform-style: preserve-3d;
+               transform: perspective(500px) translateZ(6px);
+               border-radius: 60px;
+          }
+          a#portLogo:after {
+               content: '';
+               position: absolute;
+               top: 2px;
+               left: 2px;
+               right: 2px;
+               bottom: 2px;
+               border: 2px solid #fff;
+               transform-style: preserve-3d;
+               transform: perspective(500px) translateZ(-6px);
+               border-radius: 60px;
+          }
      </style>
 </head>
 
@@ -40,8 +169,10 @@
           <!-- Navbar -->
           <div id="navbar" class="w-full top-0 z-10 animate__animated animate__faster">
                <div
-                    class="flex justify-between py-4 max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-5xl xl:max-w-7xl mx-auto">
-                    <div class="uppercase text-white border-b-4 border-r-2 border-white px-2">kritsadakorn</div>
+                    class="flex justify-between items-center py-4 max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-5xl xl:max-w-7xl mx-auto">
+                    <a id="portLogo" href="#home" class="relative px-6 py-2.5 bg-[#058d9e] text-white tracking-[4px]">
+                         <span class="block font-bold">PORTFOLIO</span>
+                    </a>
 
                     <div class="md:hidden">
                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -102,14 +233,28 @@
           <div
                class="h-[95%] w-full flex flex-col items-center justify-center max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-5xl xl:max-w-7xl mx-auto">
                <div class="w-full flex items-center justify-between">
-                    <div class="w-1/2 flex justify-center text-white">
-                         <div class="w-11/12">
-                              <p class="text-5xl text-center font-bold relative tracking-[15px] text-[#0e3742] leading-[0.90em] outline:none" style="-webkit-box-reflect: below 1px linear-gradient(transparent, #0004); animation: animate 5s linear infinite;">WEB DEVELOPER</p> <br>
+                    <div class="w-2/3 flex justify-center text-white">
+                         <div>
+                              <p class="text-5xl font-bold relative tracking-[18px] text-[#0e3742] leading-[0.90em] outline:none" style="-webkit-box-reflect: below 1px linear-gradient(transparent, #0004); animation: animate 5s linear infinite;">WEB DEVELOPER</p> <br>
                               <!-- <p id="intro" class="text-2xl"></p> -->
+                              <div class="pt-5">
+                                   <span id="logo" data-text="KRITSADAKORN KHAOLUANG" class="relative tracking-[5px] font-bold text-4xl text-[#333] before:content-[attr(data-text)] before:absolute before:text-white before:w-[100px] before:overflow-hidden before:whitespace-nowrap before:border-r-2 before:border-white">KRITSADAKORN KHAOLUANG&nbsp;</span>
+                              </div>
+                              <div class="pt-10 flex items-center gap-2">
+                                   <a href="#archive" id="button" class="text-base relative inline-block py-4 px-8 rounded-md  text-[#03e9f4] uppercase transition duration-500 tracking-[4px] overflow-hidden hover:bg-[#03e9f4] hover:text-[#050801]">
+                                        <span class="absolute block"></span>
+                                        <span class="absolute block"></span>
+                                        <span class="absolute block"></span>
+                                        <span class="absolute block"></span>
+                                        see my work examples
+                                   </a>
+                                   <p class="mx-4">OR</p>
+                                   <a href="#contact" class="px-8 py-2 text-sm border border-white rounded-md transition transform -rotate-6 hover:rotate-0 duration-500">Contact Me</a>
+                              </div>
                          </div>
                     </div>
-                    <div class="w-1/2">
-                         <div class="w-[50%] mx-auto">
+                    <div class="w-1/3">
+                         <div class="w-[90%]">
                               <img data-aos="fade-left" data-aos-duration="2000" src="./img/Profile3.jpg"
                                    class="mask mask-circle object-center object-cover transform transition hover:scale-110 duration-300">
                          </div>
