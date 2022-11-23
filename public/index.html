@@ -14,154 +14,9 @@
           integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
      <title>Kritsadakorn Khaoluang - Portfolio</title>
 
-     <style>
-          @keyframes animate {
-               0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92% {
-                    color: #0e3742;
-                    text-shadow: none;
-               }
-               18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100% {
-                    color: #fff;
-                    text-shadow: 0 0 10px #03bcf4,
-                    0 0 20px #03bcf4,
-                    0 0 40px #03bcf4,
-                    0 0 80px #03bcf4,
-                    0 0 160px #03bcf4;
-               }
-          }
-
-          #logo:before {
-               animation: typing 5s linear infinite;
-          }
-
-          @keyframes typing {
-               0%,10%,100% {
-                    width: 0;
-               }
-               70%,90% {
-                    width: 100%;
-                    text-shadow: 0 0 2px #03bcf4,
-                    0 0 4px #03bcf4,
-                    0 0 6px #03bcf4,
-                    0 0 8px #03bcf4;
-               }
-          }
-
-          #button:hover {
-               box-shadow: 0 0 5px #03e9f4,
-                          0 0 10px #03e9f4,
-                          0 0 15px #03e9f4,
-                          0 0 20px #03e9f4;
-          }
-
-          a#button span:nth-child(1) {
-               top: 0;
-               left: -100%;
-               width: 100%;
-               height: 2px;
-               background: linear-gradient(90deg,transparent,#03e9f4);
-               animation: animate1 1s linear infinite;
-          }
-          @keyframes animate1 {
-               0% {
-                    left: -100%;
-               }
-               50%, 100% {
-                    left: 100%;
-               }
-          }
-          a#button span:nth-child(2) {
-               top: -100%;
-               right: 0;
-               width: 2px;
-               height: 100%;
-               background: linear-gradient(180deg,transparent,#03e9f4);
-               animation: animate2 1s linear infinite;
-               animation-delay: 0.25s;
-          }
-          @keyframes animate2 {
-               0% {
-                    top: -100%;
-               }
-               50%, 100% {
-                    top: 100%;
-               }
-          }
-          a#button span:nth-child(3) {
-               bottom: 0;
-               right: -100%;
-               width: 100%;
-               height: 2px;
-               background: linear-gradient(90deg,transparent,#03e9f4);
-               animation: animate3 1s linear infinite;
-               animation-delay: 0.5s;
-          }
-          @keyframes animate3 {
-               0% {
-                    right: -100%;
-               }
-               50%, 100% {
-                    right: 100%;
-               }
-          }
-          a#button span:nth-child(4) {
-               bottom: -100%;
-               left: 0;
-               width: 2px;
-               height: 100%;
-               background: linear-gradient(180deg,transparent,#03e9f4);
-               animation: animate4 1s linear infinite;
-               animation-delay: 0.75s;
-          }
-          @keyframes animate4 {
-               0% {
-                    bottom: -100%;
-               }
-               50%, 100% {
-                    bottom: 100%;
-               }
-          }
-
-          a#portLogo {
-               transform-style: preserve-3d;
-               transition: ease-in-out 2s;
-               border-radius: 60px;
-          }
-          a#portLogo:hover {
-               transform: rotateY(360deg);
-          }
-          a#portLogo span {
-               transform-style: preserve-3d;
-               transform: perspective(100px) translateZ(10px);
-          }
-          a#portLogo:before {
-               content: '';
-               position: absolute;
-               top: 4px;
-               left: 6px;
-               right: 6px;
-               bottom: 4px;
-               border: 2px solid #fff;
-               transform-style: preserve-3d;
-               transform: perspective(500px) translateZ(6px);
-               border-radius: 60px;
-          }
-          a#portLogo:after {
-               content: '';
-               position: absolute;
-               top: 2px;
-               left: 2px;
-               right: 2px;
-               bottom: 2px;
-               border: 2px solid #fff;
-               transform-style: preserve-3d;
-               transform: perspective(500px) translateZ(-6px);
-               border-radius: 60px;
-          }
-     </style>
 </head>
 
-<body class="min-h-screen max-w-full bg-no-repeat bg-cover bg-center bg-scroll"
+<body class="min-h-screen max-w-full bg-no-repeat bg-cover bg-center bg-scroll font-[Montserrat]"
      style="background-image: url('./img/header-background.jpg');">
 
      <!-- Home Section -->
@@ -170,7 +25,7 @@
           <div id="navbar" class="w-full top-0 z-10 animate__animated animate__faster">
                <div
                     class="flex justify-between items-center py-4 max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-5xl xl:max-w-7xl mx-auto">
-                    <a id="portLogo" href="#home" class="relative px-6 py-2.5 bg-[#058d9e] text-white tracking-[4px]">
+                    <a id="portLogo" href="#home" class="relative px-8 py-2.5 bg-[#058d9e] text-white tracking-[4px]">
                          <span class="block font-bold">PORTFOLIO</span>
                     </a>
 
@@ -185,45 +40,43 @@
                     <div class="hidden md:block">
                          <div class="flex gap-8 text-white">
                               <p class="relative group px-2">
-                                   <span class="opacity-70 group-hover:opacity-100 transition duration-300"><a
-                                             href="#home">HOME</a></span>
+                                   <span class="opacity-70 group-hover:opacity-100 transition duration-300">
+                                        <a href="#home" class="text-xs">
+                                             <span class="text-xl">H</span>OME
+                                        </a>
+                                   </span>
                                    <span
                                         class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
                               </p>
 
                               <p class="relative group px-2">
                                    <span class="opacity-70 group-hover:opacity-100 transition duration-300"><a
-                                             href="#about">ABOUT</a></span>
+                                             href="#about" class="text-xs"><span class="text-xl">A</span>BOUT</a></span>
                                    <span
                                         class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
                               </p>
 
                               <p class="relative group px-2">
                                    <span class="opacity-70 group-hover:opacity-100 transition duration-300"><a
-                                             href="#skills">SKILLS</a></span>
+                                             href="#skills" class="text-xs"><span class="text-xl">S</span>KILLS</a></span>
                                    <span
                                         class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
                               </p>
 
                               <p class="relative group px-2">
                                    <span class="opacity-70 group-hover:opacity-100 transition duration-300"><a
-                                             href="#archive">ARCHIVE</a></span>
+                                             href="#archive" class="text-xs"><span class="text-xl">A</span>RCHIVE</a></span>
                                    <span
                                         class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
                               </p>
 
                               <p class="relative group px-2">
                                    <span class="opacity-70 group-hover:opacity-100 transition duration-300"><a
-                                             href="#contact">CONTACT</a></span>
+                                             href="#contact" class="text-xs"><span class="text-xl">C</span>ONTACT ME</a></span>
                                    <span
                                         class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
                               </p>
 
-                              <div class="flex gap-2">
-                                   <a href=""><i class="fab fa-github fa-xl"></i></a>
-                                   <a href=""><i class="fab fa-instagram fa-xl"></i></a>
-                                   <a href=""><i class="fab fa-facebook fa-xl"></i></a>
-                              </div>
                          </div>
                     </div>
                </div>
@@ -238,7 +91,7 @@
                               <p class="text-5xl font-bold relative tracking-[18px] text-[#0e3742] leading-[0.90em] outline:none" style="-webkit-box-reflect: below 1px linear-gradient(transparent, #0004); animation: animate 5s linear infinite;">WEB DEVELOPER</p> <br>
                               <!-- <p id="intro" class="text-2xl"></p> -->
                               <div class="pt-5">
-                                   <span id="logo" data-text="KRITSADAKORN KHAOLUANG" class="relative tracking-[5px] font-bold text-4xl text-[#333] before:content-[attr(data-text)] before:absolute before:text-white before:w-[100px] before:overflow-hidden before:whitespace-nowrap before:border-r-2 before:border-white">KRITSADAKORN KHAOLUANG&nbsp;</span>
+                                   <span id="logo" data-text="KRITSADAKORN KHAOLUANG" class="relative tracking-[5px] font-bold text-4xl text-[#333] before:content-[attr(data-text)] before:absolute before:text-white before:w-0 before:overflow-hidden before:whitespace-nowrap before:border-r-2 before:border-white">KRITSADAKORN KHAOLUANG&nbsp;</span>
                               </div>
                               <div class="pt-10 flex items-center gap-2">
                                    <a href="#archive" id="button" class="text-base relative inline-block py-4 px-8 rounded-md  text-[#03e9f4] uppercase transition duration-500 tracking-[4px] overflow-hidden hover:bg-[#03e9f4] hover:text-[#050801]">
@@ -269,8 +122,17 @@
      <div id="about" class="h-screen">
           <div class="h-full flex flex-col items-center justify-center">
                <div class="max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-5xl xl:max-w-7xl mx-auto">
-                    <p class="text-5xl font-medium text-white text-center" data-aos="fade-right" data-aos-duration="2000">About me</p>
-                    <p class="text-xl text-white max-w-[40%] mx-auto" data-aos="fade-left" data-aos-duration="2000">I am a person who likes to create a website with
+                    <!-- <p id="aboutHeader" data-text="ABOUT ME" data-aos="fade-right" data-aos-duration="2000">ABOUT ME</p> -->
+                    <h2 id="aboutHeader" data-aos="fade-right" data-aos-duration="2000" class="flex justify-center text-6xl font-medium tracking-[4px] text-transparent">
+                         <span style="--i:1;">A</span>
+                         <span style="--i:2;">B</span>
+                         <span style="--i:3;">O</span>
+                         <span style="--i:4;">U</span>
+                         <span style="--i:5;">T</span>
+                         <span style="--i:7;margin-left: 12px;">M</span>
+                         <span style="--i:8;">E</span>
+                    </h2>
+                    <p class="mt-12 text-xl text-white max-w-[60%] mx-auto text-center" data-aos="fade-left" data-aos-duration="2000">I am a person who likes to create a website with
                          more than one year of experiance, I want to
                          improve myself more. because I want to be the best developer for success in my career.</p>
                </div>
@@ -282,36 +144,52 @@
      <div id="skills" class="h-screen">
           <div class="h-full flex flex-col items-center justify-center">
                <div class="max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-5xl xl:max-w-7xl mx-auto">
-                    <p class="text-5xl font-medium text-white text-center">Skills</p>
-                    <div class="flex gap-2">
-                         <div class="h-28 w-28 bg-[#e44d26] rounded-full overflow-hidden">
-                              <img src="./img/html.webp">
+                    <!-- <p id="skillsHeader" class="text-5xl font-medium text-white text-center tracking-[4px]">SKILLS</p> -->
+                    <div id="skillsHeader" class="text-6xl font-bold tracking-[4px] flex justify-center pb-12">
+                         <h2>SKILLS</h2>
+                         <h2>SKILLS</h2>
+                    </div>
+                    <div class="pt-12">
+                         <div class="flex justify-center gap-4" data-aos="zoom-in-right">
+                              <div class="h-28 w-28 bg-[#e44d26] rounded-full overflow-hidden">
+                                   <img src="./img/html.webp" class="transform hover:scale-110 transition duration-100">
+                              </div>
+                              <div class="h-28 w-28 bg-[#379ad6] rounded-full overflow-hidden">
+                                   <img src="./img/css.webp" class="transform hover:scale-110 transition duration-100">
+                              </div>
+                              <div class="h-28 w-28 bg-white rounded-full overflow-hidden flex items-center justify-center">
+                                   <img src="./img/tailwind.png" class="w-[90%] transform hover:scale-110 transition duration-100">
+                              </div>
+                              <div class="h-28 w-28 bg-white rounded-full overflow-hidden">
+                                   <img src="./img/bootstrap.png" class="object-fill transform hover:scale-110 transition duration-100">
+                              </div>
+                              <div class="h-28 w-28 bg-[#ffdf00] rounded-full overflow-hidden relative">
+                                   <img src="./img/javascript.png" class="absolute right-2.5 bottom-4 transform hover:scale-110 transition duration-100">
+                              </div>
                          </div>
-                         <div class="h-28 w-28 bg-[#379ad6] rounded-full overflow-hidden">
-                              <img src="./img/css.webp">
+
+                         <div class="flex justify-center gap-3 mt-4" data-aos="zoom-in-left" data-aos-delay="500">
+                              <div class="h-28 w-28 bg-transparent rounded-full overflow-hidden">
+                                   <img src="./img/php.png" class="transform hover:scale-110 transition duration-100">
+                              </div>
+                              <div class="h-28 w-28 bg-white rounded-full overflow-hidden flex items-center justify-center">
+                                   <img src="./img/laravel.png" class="w-[60%] transform hover:scale-110 transition duration-100">
+                              </div>
+                              <div
+                                   class="h-28 w-28 bg-[#f7f7f7] rounded-full overflow-hidden flex items-center justify-center">
+                                   <img src="./img/livewire.png" class="transform hover:scale-110 transition duration-100">
+                              </div>
+                              <div class="h-28 w-28 bg-white rounded-full overflow-hidden">
+                                   <img src="./img/mysql.png" class="transform hover:scale-110 transition duration-100">
+                              </div>
                          </div>
-                         <div class="h-28 w-28 bg-white rounded-full overflow-hidden flex items-center justify-center">
-                              <img src="./img/tailwind.png" class="w-[90%]">
+
+                         <div class="flex justify-center mt-4" data-aos="zoom-in-up" data-aos-delay="1000">
+                              <div class="h-28 w-28 bg-black rounded-full overflow-hidden">
+                                   <img src="./img/github.png" class="transform hover:scale-110 transition duration-100">
+                              </div>
                          </div>
-                         <div class="h-28 w-28 bg-[#ffdf00] rounded-full overflow-hidden relative">
-                              <img src="./img/javascript.png" class="absolute right-2.5 bottom-4">
-                         </div>
-                         <div class="h-28 w-28 bg-transparent rounded-full overflow-hidden">
-                              <img src="./img/php.png">
-                         </div>
-                         <div class="h-28 w-28 bg-white rounded-full overflow-hidden flex items-center justify-center">
-                              <img src="./img/laravel.png" class="w-[60%]">
-                         </div>
-                         <div
-                              class="h-28 w-28 bg-[#f7f7f7] rounded-full overflow-hidden flex items-center justify-center">
-                              <img src="./img/livewire.png">
-                         </div>
-                         <div class="h-28 w-28 bg-white rounded-full overflow-hidden">
-                              <img src="./img/mysql.png">
-                         </div>
-                         <div class="h-28 w-28 bg-black rounded-full overflow-hidden">
-                              <img src="./img/github.png">
-                         </div>
+                         
                     </div>
                </div>
           </div>
@@ -322,7 +200,60 @@
      <div id="archive" class="h-screen">
           <div class="h-full flex flex-col items-center justify-center">
                <div class="max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-5xl xl:max-w-7xl mx-auto">
-                    <p class="text-5xl font-medium text-white text-center">Archive</p>
+                    <!-- <p class="text-5xl font-medium text-white text-center">Archive</p> -->
+                    <div id="wavy" class="relative text-6xl font-medium text-white flex justify-center gap-1.5">
+                         <span>A</span>
+                         <span>R</span>
+                         <span>C</span>
+                         <span>H</span>
+                         <span>I</span>
+                         <span>V</span>
+                         <span>E</span>
+                    </div>
+
+                    <div class="flex justify-center gap-6 mt-14">
+                         <div class="card w-[30%]">
+                              <div class="imgBox rounded-2xl">
+                                   <img src="./img/work3.png" alt="" class="rounded-2xl">
+                              </div>
+                              <div class="details w-full h-full flex justify-center items-center">
+                                   <div>
+                                        <p class="pb-6 text-2xl font-medium">Launchbright Website ENG</p>
+                                        <div class="w-full flex justify-center">
+                                             <a target="_blank" href="https://launchbright.com" class="bg-sky-500 border-2 border-transparent text-white text-xs py-2 px-4 transition duration-300 hover:bg-white hover:border-2 hover:border-sky-500 hover:text-sky-500">See on website</a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="card w-[30%]">
+                              <div class="imgBox rounded-2xl">
+                                   <img src="./img/work2.png" alt="" class="rounded-2xl">
+                              </div>
+                              <div class="details w-full h-full flex justify-center items-center">
+                                   <div>
+                                        <p class="pb-6 text-2xl font-medium">Launchbright Website TH</p>
+                                        <div class="w-full flex justify-center">
+                                             <a target="_blank" href="https://launchbright.co.th/" class="bg-sky-500 border-2 border-transparent text-white text-xs py-2 px-4 transition duration-300 hover:bg-white hover:border-2 hover:border-sky-500 hover:text-sky-500">See on website</a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="pt-8 flex justify-center">
+                         <div class="card w-[30%]">
+                              <div class="imgBox rounded-2xl">
+                                   <img src="./img/work1.png" alt="" class="rounded-2xl">
+                              </div>
+                              <div class="details w-full h-full flex justify-center items-center">
+                                   <div>
+                                        <p class="pb-6 text-2xl font-medium">Project Pulse Website</p>
+                                        <div class="w-full flex justify-center">
+                                             <a target="_blank" href="https://www.projectpulse.co/" class="bg-sky-500 border-2 border-transparent text-white text-xs py-2 px-4 transition duration-300 hover:bg-white hover:border-2 hover:border-sky-500 hover:text-sky-500">See on website</a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
                </div>
           </div>
      </div>
@@ -332,11 +263,40 @@
      <div id="contact" class="h-screen">
           <div class="h-full flex flex-col items-center justify-center">
                <div class="max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-5xl xl:max-w-7xl mx-auto">
-                    <p class="text-5xl font-medium text-white text-center">Contact</p>
+                    <!-- <p class="text-5xl font-medium text-white text-center">Contact</p> -->
+                    <h1 id="contactHeader" class="text-6xl font-medium flex justify-center gap-1.5">
+                         <span>C</span>
+                         <span>O</span>
+                         <span>N</span>
+                         <span>T</span>
+                         <span>A</span>
+                         <span>C</span>
+                         <span>T</span> 
+                         <span style="margin-left: 20px;">M</span>
+                         <span>E</span>
+                    </h1>
+
+                    <div class="pt-12 flex flex-col gap-6">
+                         <div class="flex justify-center items-center gap-5" data-aos="flip-left" data-aos-duration="500">
+                              <img src="./img/phone.png" alt="" class="w-[5%] bg-white rounded-full">
+                              <p class="text-white text-xl font-medium">062-9641666</p>
+                         </div>
+                         <div class="flex justify-center items-center gap-5" data-aos="flip-right" data-aos-duration="500" data-aos-delay="500">
+                              <img src="./img/email.png" alt="" class="w-[5%]">
+                              <p class="text-white text-xl font-medium">kritsadakorn.k1997@gmail.com</p>
+                         </div>
+                         <div class="flex justify-center items-center gap-5" data-aos="flip-right" data-aos-duration="500" data-aos-delay="1000">
+                              <img src="./img/line.png" alt="" class="w-[5%]">
+                              <p class="text-white text-xl font-medium">kornnii1717</p>
+                         </div>
+                    </div>
                </div>
           </div>
      </div>
      <!-- End Contact Section -->
+     <footer>
+          <div class="text-white bg-gray-900 text-sm text-center py-4">Created by Kritsadakorn Khaolaung © 2022</div>
+     </footer>
 
 
      <script>

@@ -1,3 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes animate {
+     0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92% {
+          color: #0e3742;
+          text-shadow: none;
+     }
+     18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100% {
+          color: #fff;
+          text-shadow: 0 0 10px #03bcf4,
+          0 0 20px #03bcf4,
+          0 0 40px #03bcf4,
+          0 0 80px #03bcf4,
+          0 0 160px #03bcf4;
+     }
+}
+
+#logo:before {
+     animation: typing 5s linear infinite;
+     animation-delay: 1s;
+}
+
+@keyframes typing {
+     0%,10%,100% {
+          width: 0;
+     }
+     70%,90% {
+          width: 100%;
+          text-shadow: 0 0 2px #03bcf4,
+          0 0 4px #03bcf4,
+          0 0 6px #03bcf4,
+          0 0 8px #03bcf4;
+     }
+}
+
+#button:hover {
+     box-shadow: 0 0 5px #03e9f4,
+                0 0 10px #03e9f4,
+                0 0 15px #03e9f4,
+                0 0 20px #03e9f4;
+}
+
+a#button span:nth-child(1) {
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 2px;
+     background: linear-gradient(90deg,transparent,#03e9f4);
+     animation: animate1 1s linear infinite;
+}
+@keyframes animate1 {
+     0% {
+          left: -100%;
+     }
+     50%, 100% {
+          left: 100%;
+     }
+}
+a#button span:nth-child(2) {
+     top: -100%;
+     right: 0;
+     width: 2px;
+     height: 100%;
+     background: linear-gradient(180deg,transparent,#03e9f4);
+     animation: animate2 1s linear infinite;
+     animation-delay: 0.25s;
+}
+@keyframes animate2 {
+     0% {
+          top: -100%;
+     }
+     50%, 100% {
+          top: 100%;
+     }
+}
+a#button span:nth-child(3) {
+     bottom: 0;
+     right: -100%;
+     width: 100%;
+     height: 2px;
+     background: linear-gradient(90deg,transparent,#03e9f4);
+     animation: animate3 1s linear infinite;
+     animation-delay: 0.5s;
+}
+@keyframes animate3 {
+     0% {
+          right: -100%;
+     }
+     50%, 100% {
+          right: 100%;
+     }
+}
+a#button span:nth-child(4) {
+     bottom: -100%;
+     left: 0;
+     width: 2px;
+     height: 100%;
+     background: linear-gradient(180deg,transparent,#03e9f4);
+     animation: animate4 1s linear infinite;
+     animation-delay: 0.75s;
+}
+@keyframes animate4 {
+     0% {
+          bottom: -100%;
+     }
+     50%, 100% {
+          bottom: 100%;
+     }
+}
+
+a#portLogo {
+     transform-style: preserve-3d;
+     transition: ease-in-out 2s;
+     border-radius: 60px;
+}
+a#portLogo:hover {
+     transform: rotateY(360deg);
+}
+a#portLogo span {
+     transform-style: preserve-3d;
+     transform: perspective(100px) translateZ(20px);
+}
+a#portLogo:before {
+     content: '';
+     position: absolute;
+     top: 4px;
+     left: 6px;
+     right: 6px;
+     bottom: 4px;
+     border: 2px solid #fff;
+     transform-style: preserve-3d;
+     transform: perspective(500px) translateZ(10px);
+     border-radius: 60px;
+}
+a#portLogo:after {
+     content: '';
+     position: absolute;
+     top: 2px;
+     left: 2px;
+     right: 2px;
+     bottom: 2px;
+     border: 2px solid #fff;
+     transform-style: preserve-3d;
+     transform: perspective(500px) translateZ(-6px);
+     border-radius: 60px;
+}
+
+h2#aboutHeader span {
+     animation: growing 3s linear infinite;
+     animation-delay: calc(0.1s * var(--i));
+}
+@keyframes growing {
+     0% {
+          color: #fff;
+          filter: blur(0px) hue-rotate(0deg);
+          text-shadow: 0 0 10px #00b3ff,
+          0 0 15px #00b3ff,
+          0 0 20px #00b3ff,
+          0 0 25px #00b3ff,
+          0 0 30px #00b3ff,
+          0 0 35px #00b3ff,
+          0 0 40px #00b3ff,
+          0 0 45px #00b3ff;
+     }
+     30%,70% {
+          color: #fff;
+          filter: blur(0px) hue-rotate(360deg);
+          text-shadow: 0 0 10px #00b3ff,
+          0 0 15px #00b3ff,
+          0 0 20px #00b3ff,
+          0 0 25px #00b3ff,
+          0 0 30px #00b3ff,
+          0 0 35px #00b3ff,
+     }
+     100% {
+          color: transparent;
+          box-shadow: none;
+          filter: blur(0px) hue-rotate(0deg);
+     }
+}
+
+#skillsHeader {
+     position: relative;
+     text-align: center;
+}
+#skillsHeader h2 {
+     position: absolute;
+     top: 0;
+     color: #fff;
+     font-size: 3rem;
+}
+
+#skillsHeader h2:nth-child(1) {
+     color: transparent;
+     -webkit-text-stroke: 2px #03a9f4;
+}
+#skillsHeader h2:nth-child(2) {
+     color: #03a9f4;
+     animation: water 3s ease-in-out infinite;
+}
+@keyframes water {
+     0%, 100% {
+          clip-path: polygon(0% 45%,15% 44%,32% 50%,54% 60%,70% 61%,84% 59%,100% 52%,100% 100%,0% 100%);
+     }
+     50% {
+          clip-path: polygon(0% 60%,16% 65%,34% 66%,51% 62%,67% 50%,84% 45%,100% 46%,100% 100%,0% 100%);
+     }
+}
+
+#wavy {
+     -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0,0,0,0.2));
+}
+#wavy span {
+     position: relative;
+     color: #fff;
+     display: inline-block;
+     animation: wavy 3s ease-in-out infinite;
+}
+@keyframes wavy {
+     0% {
+          transform: translateY(0px);
+     }
+     20% {
+          transform: translateY(-20px);
+     }
+}
+
+.card {
+     position: relative;
+     transform-style: preserve-3d;
+     transform: perspective(2000px);
+     transition: 1s;
+     box-shadow: inset 300px 0 50px rgba(0,0,0,0.5);
+     background: #fff;
+}
+
+.card:hover {
+     transform: perspective(2000px) rotate(-5deg);
+     box-shadow: inset 20px 0 50px rgba(0,0,0,0.5);
+     z-index: 1;
+}
+
+.card .imgBox {
+     position: relative;
+     /* border: 1px solid  #000; */
+     box-sizing: border-box;
+     width: 100%;
+     height: 100%;
+     z-index: 1;
+     transform-origin: left;
+     transition: 1s;
+     /* border-radius: 20px; */
+}
+.card .details {
+     position: absolute;
+     top: 0;
+     left: 0;
+     box-sizing: border-box;
+     padding: 20px;
+}
+.card:hover .imgBox {
+     transform: rotateY(-135deg);
+}
+
+.card .imgBox .img {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+}
+
+h1#contactHeader {
+     text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+     padding: 10px 20px;
+     color: #fff;
+}
+h1#contactHeader span {
+     position: relative;
+     display: inline-block;
+}
+h1#contactHeader span:nth-child(3) {
+     color: #00b3ff;
+     animation: jumping 3s alternate infinite;
+}
+@keyframes jumping {
+     0% {
+          transform: translateY(0px) rotate(0deg);
+     }
+     40% {
+          transform: translateY(0px) rotate(0deg);
+     }
+     50% {
+          transform: translateY(-60px) rotate(180deg);
+     }
+     60% {
+          transform: translateY(0px) rotate(360deg);
+     }
+     100% {
+          transform: translateY(0px) rotate(360deg);
+     }
+}
+h1#contactHeader:hover span {
+     animation: jumping 3s alternate infinite;
+}
+h1#contactHeader span:nth-child(1) {
+     animation-delay: 0s;
+}
+h1#contactHeader span:nth-child(2) {
+     animation-delay: 0.2s;
+}
+h1#contactHeader span:nth-child(4) {
+     animation-delay: 0s;
+}
+h1#contactHeader span:nth-child(5) {
+     animation-delay: 0.4s;
+}
+h1#contactHeader span:nth-child(6) {
+     animation-delay: 0.2s;
+}
+h1#contactHeader span:nth-child(7) {
+     animation-delay: 0s;
+}
+h1#contactHeader span:nth-child(8) {
+     animation: jumping 3s alternate infinite;
+     animation-delay: 0.2s;
+}
+h1#contactHeader span:nth-child(9) {
+     animation-delay: 0.1s;
+}
